@@ -7,7 +7,7 @@ namespace i4o
 {
     public static class IndexSetExtensions
     {
-        public static T FirstOrDefault<T>(this IndexSet<T> indexSet, Expression<Func<T, bool>> predicate)
+        public static T FirstOrDefaultIndexed<T>(this IndexSet<T> indexSet, Expression<Func<T, bool>> predicate)
         {
             return WhereUsingIndex(indexSet, predicate).FirstOrDefault();
         }
