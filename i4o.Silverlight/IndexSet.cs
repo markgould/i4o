@@ -27,10 +27,16 @@ namespace i4o
 
         protected void SetupIndices(IEnumerable<T> source)
         {
+            CreateCustomIndexes();
             IndexSpecification.IndexedProperties.Each(
                 propName =>
                   IndexDictionary.Add(propName, IndexBuilder.GetIndexFor(source, typeof(T).GetProperty(propName)))
             );
+        }
+
+        protected virtual void CreateCustomIndexes()
+        {
+            
         }
 
         public IEnumerator<T> GetEnumerator()
