@@ -39,7 +39,7 @@ namespace i4o
             }
         }
         
-        public static IEnumerable<T> Where<T>(this IndexSet<T> indexSet, Expression<Func<T,bool>> predicate)
+        public static IEnumerable<T> WhereIndexed<T>(this IndexSet<T> indexSet, Expression<Func<T,bool>> predicate)
         {
             return WhereUsingIndex(indexSet, predicate);
         }
