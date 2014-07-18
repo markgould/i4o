@@ -62,13 +62,13 @@ namespace i4o.Tests
 
 		public static T ShouldBeOfType<T>(this T actual, Type expected)
 		{
-			Assert.IsInstanceOfType(expected, actual);
+			Assert.IsInstanceOf(expected, actual);
 			return actual;
 		}
 
 		public static T ShouldNotBeOfType<T>(this T actual, Type expected)
 		{
-			Assert.IsNotInstanceOfType(expected, actual);
+			Assert.IsNotInstanceOf(expected, actual);
 			return actual;
 		}
 

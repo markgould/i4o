@@ -12,11 +12,16 @@
     <RootNamespace>i4o</RootNamespace>
     <AssemblyName>i4o.Silverlight</AssemblyName>
     <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
     <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
     <SilverlightApplication>false</SilverlightApplication>
     <ValidateXaml>true</ValidateXaml>
     <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
   </PropertyGroup>
   <!-- This property group is only here to support building this project using the 
        MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
@@ -46,6 +51,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="C5">
+      <HintPath>..\packages\C5.2.3.0.1\lib\sl50\C5.dll</HintPath>
+    </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="system" />
     <Reference Include="System.Core" />
@@ -54,38 +62,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="c5\arrays\ArrayList.cs" />
-    <Compile Include="c5\arrays\CircularQueue.cs" />
-    <Compile Include="c5\arrays\HashedArrayList.cs" />
-    <Compile Include="c5\arrays\SortedArray.cs" />
-    <Compile Include="c5\Attributes.cs" />
-    <Compile Include="c5\Builtin.cs" />
-    <Compile Include="c5\Collections.cs" />
-    <Compile Include="c5\Comparer.cs" />
-    <Compile Include="c5\Delegates.cs" />
-    <Compile Include="c5\Dictionaries.cs" />
-    <Compile Include="c5\Enums.cs" />
-    <Compile Include="c5\Events.cs" />
-    <Compile Include="c5\Exceptions.cs" />
-    <Compile Include="c5\Formatting.cs" />
-    <Compile Include="c5\Hashers.cs" />
-    <Compile Include="c5\hashing\HashBag.cs" />
-    <Compile Include="c5\hashing\HashDictionary.cs" />
-    <Compile Include="c5\hashing\HashTable.cs" />
-    <Compile Include="c5\heaps\IntervalHeap.cs" />
-    <Compile Include="c5\Interfaces.cs" />
-    <Compile Include="c5\linkedlists\HashedLinkedList.cs" />
-    <Compile Include="c5\linkedlists\LinkedList.cs" />
-    <Compile Include="c5\MappedEnumerators.cs" />
-    <Compile Include="c5\Random.cs" />
-    <Compile Include="c5\Records.cs" />
-    <Compile Include="c5\Sorting.cs" />
-    <Compile Include="c5\trees\RedBlackTreeBag.cs" />
-    <Compile Include="c5\trees\RedBlackTreeDictionary.cs" />
-    <Compile Include="c5\trees\RedBlackTreeSet.cs" />
-    <Compile Include="c5\ViewSupport.cs" />
-    <Compile Include="c5\WrappedArray.cs" />
-    <Compile Include="c5\Wrappers.cs" />
     <Compile Include="ComparisonIndex.cs" />
     <Compile Include="DelegateFactory.cs" />
     <Compile Include="EqualityIndex.cs" />
@@ -100,6 +76,9 @@
     <Compile Include="ObservingIndexSet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PropertyReader.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <ProjectExtensions>

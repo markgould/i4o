@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>i4o</RootNamespace>
     <AssemblyName>i4o</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>
     </SccProjectName>
@@ -20,7 +20,8 @@
     </SccAuxPath>
     <SccProvider>
     </SccProvider>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,6 +31,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -38,109 +40,17 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="C5">
+      <HintPath>..\packages\C5.2.3.0.1\lib\net40\C5.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\i4o.Silverlight\c5\arrays\ArrayList.cs">
-      <Link>c5\arrays\ArrayList.cs</Link>
-    </Compile>
-    <Compile Include="..\i4o.Silverlight\c5\arrays\CircularQueue.cs">
-      <Link>c5\arrays\CircularQueue.cs</Link>
-    </Compile>
-    <Compile Include="..\i4o.Silverlight\c5\arrays\HashedArrayList.cs">
-      <Link>c5\arrays\HashedArrayList.cs</Link>
-    </Compile>
-    <Compile Include="..\i4o.Silverlight\c5\arrays\SortedArray.cs">
-      <Link>c5\arrays\SortedArray.cs</Link>
-    </Compile>
-    <Compile Include="..\i4o.Silverlight\c5\Attributes.cs">
-      <Link>c5\Attributes.cs</Link>
-    </Compile>
-    <Compile Include="..\i4o.Silverlight\c5\Builtin.cs">
-      <Link>c5\Builtin.cs</Link>
-    </Compile>
-    <Compile Include="..\i4o.Silverlight\c5\Collections.cs">
-      <Link>c5\Collections.cs</Link>
-    </Compile>
-    <Compile Include="..\i4o.Silverlight\c5\Comparer.cs">
-      <Link>c5\Comparer.cs</Link>
-    </Compile>
-    <Compile Include="..\i4o.Silverlight\c5\Delegates.cs">
-      <Link>c5\Delegates.cs</Link>
-    </Compile>
-    <Compile Include="..\i4o.Silverlight\c5\Dictionaries.cs">
-      <Link>c5\Dictionaries.cs</Link>
-    </Compile>
-    <Compile Include="..\i4o.Silverlight\c5\Enums.cs">
-      <Link>c5\Enums.cs</Link>
-    </Compile>
-    <Compile Include="..\i4o.Silverlight\c5\Events.cs">
-      <Link>c5\Events.cs</Link>
-    </Compile>
-    <Compile Include="..\i4o.Silverlight\c5\Exceptions.cs">
-      <Link>c5\Exceptions.cs</Link>
-    </Compile>
-    <Compile Include="..\i4o.Silverlight\c5\Formatting.cs">
-      <Link>c5\Formatting.cs</Link>
-    </Compile>
-    <Compile Include="..\i4o.Silverlight\c5\Hashers.cs">
-      <Link>c5\Hashers.cs</Link>
-    </Compile>
-    <Compile Include="..\i4o.Silverlight\c5\hashing\HashBag.cs">
-      <Link>c5\hashing\HashBag.cs</Link>
-    </Compile>
-    <Compile Include="..\i4o.Silverlight\c5\hashing\HashDictionary.cs">
-      <Link>c5\hashing\HashDictionary.cs</Link>
-    </Compile>
-    <Compile Include="..\i4o.Silverlight\c5\hashing\HashTable.cs">
-      <Link>c5\hashing\HashTable.cs</Link>
-    </Compile>
-    <Compile Include="..\i4o.Silverlight\c5\heaps\IntervalHeap.cs">
-      <Link>c5\heaps\IntervalHeap.cs</Link>
-    </Compile>
-    <Compile Include="..\i4o.Silverlight\c5\Interfaces.cs">
-      <Link>c5\Interfaces.cs</Link>
-    </Compile>
-    <Compile Include="..\i4o.Silverlight\c5\linkedlists\HashedLinkedList.cs">
-      <Link>c5\linkedlists\HashedLinkedList.cs</Link>
-    </Compile>
-    <Compile Include="..\i4o.Silverlight\c5\linkedlists\LinkedList.cs">
-      <Link>c5\linkedlists\LinkedList.cs</Link>
-    </Compile>
-    <Compile Include="..\i4o.Silverlight\c5\MappedEnumerators.cs">
-      <Link>c5\MappedEnumerators.cs</Link>
-    </Compile>
-    <Compile Include="..\i4o.Silverlight\c5\Random.cs">
-      <Link>c5\Random.cs</Link>
-    </Compile>
-    <Compile Include="..\i4o.Silverlight\c5\Records.cs">
-      <Link>c5\Records.cs</Link>
-    </Compile>
-    <Compile Include="..\i4o.Silverlight\c5\Sorting.cs">
-      <Link>c5\Sorting.cs</Link>
-    </Compile>
-    <Compile Include="..\i4o.Silverlight\c5\trees\RedBlackTreeBag.cs">
-      <Link>c5\trees\RedBlackTreeBag.cs</Link>
-    </Compile>
-    <Compile Include="..\i4o.Silverlight\c5\trees\RedBlackTreeDictionary.cs">
-      <Link>c5\trees\RedBlackTreeDictionary.cs</Link>
-    </Compile>
-    <Compile Include="..\i4o.Silverlight\c5\trees\RedBlackTreeSet.cs">
-      <Link>c5\trees\RedBlackTreeSet.cs</Link>
-    </Compile>
-    <Compile Include="..\i4o.Silverlight\c5\ViewSupport.cs">
-      <Link>c5\ViewSupport.cs</Link>
-    </Compile>
-    <Compile Include="..\i4o.Silverlight\c5\WrappedArray.cs">
-      <Link>c5\WrappedArray.cs</Link>
-    </Compile>
-    <Compile Include="..\i4o.Silverlight\c5\Wrappers.cs">
-      <Link>c5\Wrappers.cs</Link>
-    </Compile>
     <Compile Include="..\i4o.Silverlight\ComparisonIndex.cs">
       <Link>ComparisonIndex.cs</Link>
     </Compile>
@@ -186,6 +96,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
