@@ -93,6 +93,7 @@
     <Compile Include="..\i4o.Silverlight\PropertyReader.cs">
       <Link>PropertyReader.cs</Link>
     </Compile>
+    <Compile Include="UpdateableIndexSet.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
