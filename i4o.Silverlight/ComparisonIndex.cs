@@ -105,6 +105,11 @@ namespace i4o
             }
         }
 
+        public IEnumerable<TChild> WhereThroughIndex(object value)
+        {
+            return IsEqualTo((TProperty)value);
+        }
+
         public void Reset(TChild changedObject)
         {
             Remove(changedObject);

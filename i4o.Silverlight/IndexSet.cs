@@ -63,6 +63,12 @@ namespace i4o
             return IndexDictionary.First().Value.Where(predicate.Compile());
         }
 
+        internal IEnumerable<T> WhereUsingIndex(string propertyName, object value)
+        {
+            return IndexDictionary[propertyName].WhereThroughIndex(value);
+        }
+
+
         private static MemberExpression LeftSide(Expression<Func<T, bool>> predicate)
         {
             return ((MemberExpression)((BinaryExpression)predicate.Body).Left);

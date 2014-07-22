@@ -1,4 +1,6 @@
 using System.IO;
+using System.Linq.Expressions;
+using System.Reflection;
 using System.Runtime.Serialization;
 
 #if SILVERLIGHT

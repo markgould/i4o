@@ -7,9 +7,9 @@ namespace i4o
 {
     public static class IndexSetExtensions
     {
-        public static T FirstOrDefaultIndexed<T>(this IndexSet<T> indexSet, Expression<Func<T, bool>> predicate)
+        public static T FirstOrDefaultByIndexedProperty<T, TProperty>(this IndexSet<T> indexSet, Expression<Func<T, TProperty>> property, object value)
         {
-            return WhereUsingIndex(indexSet, predicate).FirstOrDefault();
+            return WhereByIndexedProperty(indexSet, property, value).FirstOrDefault();
         }
 
         public static IEnumerable<T> WhereUsingIndex<T>(IndexSet<T> indexSet, Expression<Func<T, bool>> predicate)
@@ -42,6 +42,18 @@ namespace i4o
         public static IEnumerable<T> WhereIndexed<T>(this IndexSet<T> indexSet, Expression<Func<T,bool>> predicate)
         {
             return WhereUsingIndex(indexSet, predicate);
+        }
+
+        public static IEnumerable<T> WhereByIndexedProperty<T, TProperty>(this IndexSet<T> indexSet,
+           Expression<Func<T, TProperty>> property,  object value)
+        {
+            return indexSet.WhereUsingIndex(property.GetMemberName(), value);
+        }
+
+        public static IEnumerable<T> WhereByIndexedProperty<T>(this IndexSet<T> indexSet,
+        string propertyName, object value)
+        {
+            return indexSet.WhereUsingIndex(propertyName, value);
         }
     }
 }

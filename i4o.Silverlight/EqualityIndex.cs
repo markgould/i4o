@@ -92,6 +92,12 @@ namespace i4o
                 yield break;
         }
 
+        public IEnumerable<TChild> WhereThroughIndex(object value)
+        {
+            throw new NotImplementedException();
+        }
+
+
         public void Reset(TChild changedObject)
         {
             Remove(changedObject);
